@@ -821,13 +821,15 @@ header.sticky-header {
 
 .form-input {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background-color: var(--background);
   padding: 0.75rem 1rem;
   outline: none;
   transition: border-color 0.15s ease;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .form-input:focus {
@@ -1094,16 +1096,54 @@ footer.main-footer {
     grid-template-columns: 1fr;
   }
 
+  .contact-grid {
+    gap: 1.5rem;
+  }
+
+  .contact-card-info {
+    padding: 1.5rem;
+  }
+
   .contact-form-card {
     grid-template-columns: 1fr;
+    padding: 1.25rem;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form-card h2 {
+    grid-column: span 1 !important;
+    font-size: 1.35rem !important;
+  }
+
+  .contact-form-card p {
+    grid-column: span 1 !important;
   }
 
   .form-full {
     grid-column: span 1;
   }
 
+  .contact-form-card .btn {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+  }
+
   .footer-cols {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-form-card {
+    padding: 1rem 0.85rem;
+  }
+
+  .contact-card-info {
+    padding: 1.25rem 0.85rem;
   }
 }
 
